@@ -11,7 +11,7 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>NeuroZen - Apps en Google Play</title>
   </head>
-  <body>
+  <body class="font-google-sans">
     <slot />
   </body>
 </html>
@@ -22,5 +22,7 @@ import "../styles/global.css";
     margin: 0;
     width: 100%;
     height: 100%;
+    padding-inline: 10px;
+    padding-block: 6px;
   }
 </style>
