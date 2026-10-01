@@ -12,17 +12,16 @@ import gPlayButton from "../../images/logos/gplay.png";
           class="flex items-center justify-between gap-14 pl-2 text-[14px] font-medium"
         >
           <li>Juegos</li>
-          <li class="text-green-700 after:content-[''] after:w-full after:h-[0.21rem] after:bg-green-700 after:top-10 after:left-0 relative after:absolute">Apps</li>
+          <li
+            class="text-accent after:content-[''] after:w-full after:h-[0.21rem] after:bg-accent after:top-10 after:left-0 relative after:absolute"
+          >
+            Apps
+          </li>
           <li>Libros</li>
           <li>Infantiles</li>
         </ul>
       </nav>
     </div>
-    <img
-      src={gPlayButton.src}
-      alt="Google Play Logo"
-      class="block w-42 lg:hidden"
-    />
     <div class="flex items-center justify-between gap-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -59,15 +58,4 @@ import gPlayButton from "../../images/logos/gplay.png";
       </div>
     </div>
   </div>
-
-  <nav class="flex lg:hidden">
-    <ul
-      class="flex items-center justify-between gap-14 pl-2 text-[13px] font-medium"
-    >
-      <li>Juegos</li>
-      <li class="text-green-700">Apps</li>
-      <li>Libros</li>
-      <li>Infantiles</li>
-    </ul>
-  </nav>
 </header>
