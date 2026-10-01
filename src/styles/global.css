@@ -4,4 +4,8 @@
 @theme {
   --font-google-sans: "Google Sans", sans-serif;
   --font-roboto: "Roboto", sans-serif;
+
+  --color-primary: #202124;
+  --color-secondary: #5f6368;
+  --color-accent: #01875f;
 }
