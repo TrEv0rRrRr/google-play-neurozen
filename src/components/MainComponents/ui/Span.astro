@@ -1,0 +1,20 @@
+---
+interface Props {
+  style: "first" | "second" | "third" | "fourth";
+}
+
+const { style } = Astro.props;
+---
+
+<span
+  class:list={[
+    {
+      "text-primary text-[.875rem] leading-5 font-medium": style === "first",
+    },
+    { "text-secondary text-[.875rem] leading-5": style === "second" },
+    { "text-primary text-[56px] leading-16": style === "third" },
+    { "text-secondary text-[.775rem]": style === "fourth" },
+  ]}
+>
+  <slot />
+</span>
