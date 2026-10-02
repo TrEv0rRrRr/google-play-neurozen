@@ -1,0 +1,74 @@
+---
+import type { Comment } from "../../../common/comment";
+
+import Stars2 from "../../../images/icons/stars2.png";
+import Span from "../ui/Span.astro";
+
+interface Props {
+  comment: Comment;
+}
+
+const { comment } = Astro.props;
+---
+
+<div class="flex flex-col gap-3">
+  <div class="flex items-center justify-between">
+    <div class="flex gap-4 items-center">
+      <div
+        class=`bg-[#0F172A] w-8 h-8 rounded-full text-white flex items-center justify-center text-[18px]`
+      >
+        {comment.name.at(0)}
+      </div>
+      <span>{comment.name}</span>
+    </div>
+    <span
+      class="cursor-pointer hover:bg-[#f5f5f5] transition-colors hover:rounded-2xl"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+        ></path>
+      </svg>
+    </span>
+  </div>
+  <div class="flex flex-col gap-3">
+    <div class="flex gap-4 items-center">
+      <img src={Stars2.src} alt="" aria-hidden class="h-auto w-15" />
+      <Span style="fourth">{comment.date}</Span>
+    </div>
+
+    <p>
+      <Span style="second">{comment.comment}</Span>
+    </p>
+
+    {
+      comment.useful && (
+        <p>
+          <Span style="fourth">Esta opinión les resultó útil a 3 personas</Span>
+        </p>
+      )
+    }
+  </div>
+  <div class="flex gap-5 items-center">
+    <Span style="fourth">¿Te resultó útil?</Span>
+    <div class="flex gap-5">
+      <button
+        class="border border-[#d4d4d4] rounded-xl px-5 cursor-pointer font-medium hover:bg-[#f5f5f5]"
+        ><Span style="second">Sí</Span></button
+      >
+      <button
+        class="border border-[#d4d4d4] rounded-xl px-5 cursor-pointer font-medium hover:bg-[#f5f5f5]"
+        ><Span style="second">No</Span></button
+      >
+    </div>
+  </div>
+</div>
