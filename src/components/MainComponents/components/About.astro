@@ -1,0 +1,72 @@
+---
+import SecondaryTitle from "../ui/SecondaryTitle.astro";
+import Span from "../ui/Span.astro";
+---
+
+<section class="flex flex-col gap-3 justify-between mt-5">
+  <div>
+    <SecondaryTitle>
+      <div class="flex items-center gap-3">
+        Acerca de esta app
+        <span
+          class="p-2 cursor-pointer hover:bg-[#f5f5f5] transition-colors hover:rounded-2xl"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+          </svg>
+        </span>
+      </div>
+    </SecondaryTitle>
+  </div>
+  <div class="flex flex-col gap-5">
+    <p>
+      <Span style="second"
+        >QuakExit es un sistema IoT que automatiza la evacuación sísmica
+        residencial desbloqueando cerraduras electromagnéticas y activando luces
+        en menos de cinco segundos. Opera de forma autónoma y offline mediante
+        microcontroladores ESP32 con baterías de respaldo, evitando que las
+        puertas se traben ante cortes de luz o fallas de red. Su ecosistema
+        incluye una app móvil para residentes y un panel centralizado para
+        proyectos inmobiliarios.
+      </Span>
+    </p>
+
+    <div class="flex flex-col gap-1">
+      <Span style="first">Actualización</Span>
+      <Span style="second">01 nov 2026</Span>
+    </div>
+
+    <button
+      class="border border-[#d4d4d4] w-max rounded-xl px-5 py-0.5 cursor-pointer font-medium hover:bg-[#f5f5f5] mt-4"
+      ><Span style="second">Herramientas</Span></button
+    >
+  </div>
+
+  <div class="flex gap-5 mt-8">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-4"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5"
+      ></path>
+    </svg>
+    <Span style="first">Marcar como inapropiado</Span>
+  </div>
+</section>
