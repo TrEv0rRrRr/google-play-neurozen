@@ -1,5 +1,6 @@
 ---
 import ESRBLogo from "../../../images/logos/esrb.png";
+import Apps from "../../../images/apps.png";
 import Button from "../ui/Button.astro";
 import SecondaryTitle from "../ui/SecondaryTitle.astro";
 import Span from "../ui/Span.astro";
@@ -7,9 +8,9 @@ import About from "./About.astro";
 import Comments from "./Comments.astro";
 ---
 
-<section class="flex gap-10 justify-between">
-  <div class="flex flex-col gap-8">
-    <div class="flex flex-col gap-8 w-212">
+<section class="flex gap-15 justify-between">
+  <div class="flex flex-col gap-8 w-218">
+    <div class="flex flex-col gap-8">
       <div class="flex flex-col gap-5">
         <SecondaryTitle>Novedades</SecondaryTitle>
         <Span style="second"
@@ -341,7 +342,7 @@ import Comments from "./Comments.astro";
       </details>
     </div>
 
-    <div>
+    <div class="flex flex-col">
       <SecondaryTitle>
         <div class="flex items-center justify-between">
           Más apps para probar
@@ -364,6 +365,8 @@ import Comments from "./Comments.astro";
           </span>
         </div>
       </SecondaryTitle>
+
+      <img src={Apps.src} alt="Apps para probar" class="mt-4" />
     </div>
   </div>
 </section>
