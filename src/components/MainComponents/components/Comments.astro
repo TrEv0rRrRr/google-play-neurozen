@@ -4,6 +4,8 @@ import SecondaryTitle from "../ui/SecondaryTitle.astro";
 import Span from "../ui/Span.astro";
 import Stars from "../../../images/icons/stars.png";
 import OpinionMetric from "../ui/OpinionMetric.astro";
+import { comments } from "../../../common/comments";
+import Comment from "./Comment.astro";
 ---
 
 <div class="flex flex-col gap-5">
@@ -95,46 +97,59 @@ import OpinionMetric from "../ui/OpinionMetric.astro";
     </Button>
   </div>
 
-  <div class="flex gap-10">
-    <div class="flex flex-col gap-2">
-      <div>
-        <Span style="third">4.8</Span>
-        <img src={Stars.src} alt="" aria-hidden />
+  <div class="flex flex-col gap-10">
+    <div class="flex gap-10">
+      <div class="flex flex-col gap-2">
+        <div>
+          <Span style="third">4.8</Span>
+          <img src={Stars.src} alt="" aria-hidden />
+        </div>
+        <Span style="fourth">5K opiniones</Span>
       </div>
-      <Span style="fourth">5K opiniones</Span>
+
+      <ul class="w-full">
+        <li class="flex gap-2 items-center">
+          <Span style="fourth">5</Span>
+          <OpinionMetric>
+            <div class=`w-[80%] h-3 bg-accent rounded-xl`></div>
+          </OpinionMetric>
+        </li>
+        <li class="flex gap-2 items-center">
+          <Span style="fourth">4</Span>
+          <OpinionMetric>
+            <div class=`w-[20%] h-3 bg-accent rounded-xl`></div>
+          </OpinionMetric>
+        </li>
+        <li class="flex gap-2 items-center">
+          <Span style="fourth">3</Span>
+          <OpinionMetric>
+            <div class=`w-[10%] h-3 bg-accent rounded-xl`></div>
+          </OpinionMetric>
+        </li>
+        <li class="flex gap-2 items-center">
+          <Span style="fourth">2</Span>
+          <OpinionMetric>
+            <div class=`w-[0%] h-3 bg-accent rounded-xl`></div>
+          </OpinionMetric>
+        </li>
+        <li class="flex gap-2 items-center">
+          <Span style="fourth">1</Span>
+          <OpinionMetric>
+            <div class=`w-[5%] h-3 bg-accent rounded-xl`></div>
+          </OpinionMetric>
+        </li>
+      </ul>
     </div>
 
-    <ul class="w-full">
-      <li class="flex gap-2 items-center">
-        <Span style="fourth">5</Span>
-        <OpinionMetric>
-          <div class=`w-[80%] h-3 bg-accent rounded-xl`></div>
-        </OpinionMetric>
-      </li>
-      <li class="flex gap-2 items-center">
-        <Span style="fourth">4</Span>
-        <OpinionMetric>
-          <div class=`w-[20%] h-3 bg-accent rounded-xl`></div>
-        </OpinionMetric>
-      </li>
-      <li class="flex gap-2 items-center">
-        <Span style="fourth">3</Span>
-        <OpinionMetric>
-          <div class=`w-[10%] h-3 bg-accent rounded-xl`></div>
-        </OpinionMetric>
-      </li>
-      <li class="flex gap-2 items-center">
-        <Span style="fourth">2</Span>
-        <OpinionMetric>
-          <div class=`w-[0%] h-3 bg-accent rounded-xl`></div>
-        </OpinionMetric>
-      </li>
-      <li class="flex gap-2 items-center">
-        <Span style="fourth">1</Span>
-        <OpinionMetric>
-          <div class=`w-[5%] h-3 bg-accent rounded-xl`></div>
-        </OpinionMetric>
-      </li>
-    </ul>
+    <section class="flex flex-col gap-8">
+      {comments.map((comment) => <Comment comment={comment} />)}
+    </section>
   </div>
+
+  <button
+    class="text-accent text-[.875rem] font-medium ml-2 cursor-pointer hover:bg-green-50 transition-colors py-[0.4rem] rounded-[0.4rem]
+    px-3 mt-2 text-start w-max"
+  >
+    Ver todas las opiniones
+  </button>
 </div>
